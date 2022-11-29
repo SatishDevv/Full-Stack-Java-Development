@@ -1,0 +1,66 @@
+
+
+
+                            ASSIGNMENT ON SEPCIAL OPERATORS :
+
+
+1) LIST ALL THE EMPLOYEES WHOSE COMMISSION IS NULL
+    ==> select * from emp where comm is null;
+
+2) LIST ALL THE EMPLOYEES WHO DON’T HAVE A REPORTING MANAGER
+    ==> select * from emp where not job='MANAGER';
+
+3) LIST ALL THE SALESMEN IN DEPT 30.
+    ==> SELECT * FROM EMP WHERE JOB='SALESMAN' AND DEPTNO=30
+
+4) LIST ALL THE SALESMEN IN DEPT NUMBER 30 AND HAVING SALARY GREATER THAN 1500
+    ==> select * from emp where job='SALESMAN' AND deptno=30 AND sal > 1500
+
+5) LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘S’ OR ‘A’
+    ==> select * from emp where ename like 'S%' OR ename like 'A%';
+
+6) LIST ALL THE EMPLOYEES EXCEPT THOSE WHO ARE WORKING IN DEPT 10 & 20.
+    ==> select * from emp where deptno in (10,20);
+
+7) LIST THE EMPLOYEES WHOSE NAME DOES NOT START WITH ‘S’ ;
+    ==> select * from emp where ename not like 'S%';
+
+8) LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10
+    ==> select * from emp where job = 'MANAGER' AND deptno =10;
+
+9) LIST ALL THE EMPLOYEES WHOSE COMMISSION IS NULL AND WORKING AS CLERK
+    ==> select * from emp where comm is NULL AND job = 'CLERK';
+
+10) LIST ALL THE EMPLOYEES WHO DON’T HAVE A REPORTING MANAGER IN DEPTNO 10 OR 30.
+    ==>  select * from emp where job not like 'MANAGER' AND deptno in (10,30);
+
+11) LIST ALL THE SALESMEN IN DEPT 30 WITH SAL MORE THAN 2450.
+    ==> select * from emp where job = 'SALESMAN' AND  deptno=30 AND sal > 2450
+
+12) LIST ALL THE ANALYST IN DEPT NUMBER 20 AND HAVING SALARY GREATER THAN 2500
+    ==> select * from emp  where deptno = 20 and sal > 2500;
+
+13) LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘M’ OR ‘J’
+    ==> select * from emp where ename like 'M%' or ename like 'J%'
+
+14) LIST ALL THE EMPLOYEES WITH ANNUAL SALARY EXCEPT THOSE WHO ARE WORKING IN DEPT 30
+    ==> select emp.*, sal*12 from emp where deptno=30;
+
+15) LIST THE EMPLOYEES WHOSE NAME DOES NOT END WITH ‘ES’ OR ‘R.
+    ==> 
+
+16) LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10 ALONG WITH 10% HIKE IN SALARY
+    ==> select emp.* , sal*10/100 from emp where job = 'MANAGER' AND deptno=30;
+
+17) DISPLAY ALL THE EMPLOYEE WHO ARE ‘SALESMAN’S HAVING ‘E’ AS THE LAST BUT ONE CHARACTER IN ENAME BUT SALARY HAVING EXACTLY 4 CHARACTER.
+    ==> select * from emp where job = 'SALESMAN' AND ename like '%E%' AND sal like '____';
+
+
+18) DISPLAY ALL THE EMPLOYEE WHO ARE JOINED AFTER YEAR 81.
+    ==> select * from emp where hiredate > '31-dec-81';
+
+19) DISPLAY ALL THE EMPLOYEE WHO ARE JOINED IN FEB.
+    ==> select * from emp where hiredate like '%-FEB-%';
+
+20) LIST THE EMPLOYEES WHO ARE NOT WORKING AS MANAGERS AND CLERKS IN DEPT 10 AND 20 WITH A SALARY IN THE RANGE OF 1000 TO 3000.
+    ==> select * from emp where job in ('MANAGER','CLERK') AND DEPTNO IN (10,20) AND sal BETWEEN 1001 and 2999;

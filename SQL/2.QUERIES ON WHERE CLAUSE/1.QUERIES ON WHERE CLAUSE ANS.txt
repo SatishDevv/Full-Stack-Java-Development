@@ -1,0 +1,58 @@
+                QUERIES ON WHERE CLAUSE
+
+
+Q1.WAQTD all the salary of employee if the salary is greater than 1500.
+    ==> select sal from emp where sal > 1500;
+
+Q2.WAQTD all the details of the employee if designation is Manager.
+    ==> select * from emp where job='MANAGER' ;
+
+Q3. WAQTD Employee name ,Department no, Date of joining if the date of joining is “01-JAN-1995” 
+    ==>  select * from emp where hiredate= '01-jan-1995';
+
+
+Q4. WAQTD all the details of employee only if they were hired after the year 1995.
+    ==> select * from emp where hiredate > '01-dec-1995' ;
+
+Q5. WAQTD department name, department number for all the department which is located in NEW YORK
+    ==> select dname, deptno from dept where loc = 'NEW YORK';
+
+Q6. WAQTD Department number along with location whose Department is Research.
+    ==> select deptno from dept where dname = 'RESEARCH';
+
+Q7. WAQTD Salary ,Annual salary , Quarter salary of all the employees if salary is greater than commission.
+    ==> select ename,sal, comm, sal*12, sal*3 from emp where sal > comm ;
+
+Q8. WAQTD Employee name , Monthly salary , Job of all the employees who’s monthly salary is greater than 2000.
+    ==> select ename ,sal  from emp where sal > 2000;
+
+Q9. WAQTD all the details of employees if the department number is 20.
+    ==> select * from emp where deptno = 20;
+
+Q10. WAQTD Salary , Annual salary, 10% Hike in Quarter salary if and only if designation is Clerk.
+    ==> dselect sal, sal*12, sal*3, sal*3*10/100 from emp where job = 'CLERK' ;
+
+Q11. WAQTD details of the employee who’s name is Ford.
+    ==> select * from emp where ename='FORD' ;
+
+Q12. WAQTD Annual salary , 1000 rs bonus in annual salary along with monthly salary if department number is 30.
+    ==> select sal*12, sal*12+1000, sal from emp where deptno = 30 ;
+
+Q13. WAQTD all the details of department if location is BOSTON.
+    ==> select * from dept where loc = 'BOSTON';
+
+Q14. WAQTD Salary , Quarter salary , 5% decrement in monthly salary if the job is Manager.
+    ==> select sal, sal*3, sal-sal*5/100 from emp where job = 'MANAGER';
+
+Q15. WAQTD all the details of all the employees whose commission is less than salary.
+    ==> select * from emp where comm < sal;
+
+
+
+
+
+
+
+
+
+
