@@ -1,0 +1,114 @@
+
+
+
+                ASSIGNMENT ON CASE 1 
+
+
+1.WAQTD NAME OF THE EMPLOYEES EARNING MORE THAN ADAMS
+    ==> select ename from emp 
+	    where sal > (select sal from emp 
+		     	where ename = 'ADAMS');
+
+2.WAQTD NAME AND SALARY OF THE EMPLOYEES EARNING LESS THAN KING
+    ==> select ename, sal from emp
+        where sal < (select sal from emp 
+                    where ename='KING');
+
+3.WAQTD NAME AND DEPTNO OF THE EMPLOYEES IF THEY ARE WORKING IN THE SAME DEPT AS JONES
+    ==> select ename, deptno from emp 
+        	where deptno=(select deptno from emp 
+				            where ename='JONES');
+
+4.WAQTD NAME AND JOB OF ALL THE EMPLOYEES WORKING IN THE SAME DESIGNATION AS JAMES
+    ==> select ename, job from emp 
+        where job = (select job from emp 
+			        where ename = 'JAMES');
+
+5.WAQTD EMPNO AND ENAME ALONG WITH ANNUAL SALARY OF ALL THEEMPLOYEES IF THEIR ANNUAL SALARY IS GREATER THAN WARDS ANNUAL SALARY.
+    ==> select empno, ename, sal*12 FROM EMP
+        where sal*12 > (select sal*12 from emp
+                         where ename ='WARD');
+
+6.WAQTD NAME AND HIREDATE OF THE EMPLOYEES IF THEY ARE HIRED BEFORE SCOTT
+    ==> select ename, hiredate from emp
+        where hiredate < (select hiredate from emp
+			               where ename = 'SCOTT');
+
+7.WAQTD NAME AND HIREDATE OF THE EMPLOYEES IF THEY ARE HIRED AFTER THE PRESIDENT
+    ==> select ename, hiredate from emp
+        where hiredate < (select hiredate from emp 
+                           where ename = 'PRESIDENT');
+
+8.WAQTD NAME AND SAL OF THE EMPLOYEE IF THEY ARE EARNING SAL LESS THAN THE EMPLOYEE WHOS EMPNO IS 7839
+    ==>  select ename, sal from emp
+         where sal < ( select sal from emp 
+                        where empno = 7839);
+
+9.WAQTD ALL THE DETAILS OF THE EMPLOYEES IF THE EMPLOYEES ARE HIRED BEFORE MILLER
+    ==> select emp.* from emp
+        where hiredate > (select hiredate from emp
+                             where ename='MILLER');
+
+10.WAQTD ENAME AND EMPNO OF THE EMPLOYEES IF EMPLOYEES ARE EARNING MORE THAN ALLEN
+    ==> select ename, empno from emp
+        where sal > (select sal from emp 
+                     where ename='ALLEN');
+
+11.WAQTD ENAME AND SALARY OF ALL THE EMPLOYEES WHO ARE EARNING MORE THAN MILLER BUT LESS THAN ALLEN .
+    ==> select ename,sal from emp
+        where sal > (select sal from emp where ename = 'MILLER')
+        and sal  <  (select sal from emp where ename = 'ALLEN');
+
+12.WAQTD ALL THE DETAILS OF THE EMPLOYEES WORKING IN DEPT 20 AND WORKING IN THE SAME DESIGNATION AS SMITH
+    ==> select emp.* from emp
+        where deptno = 20
+        and job = (select job from emp 
+                    where ename = 'SMITH');
+
+13.WAQTD ALL THE DETAILS OF THE EMPLOYEES WORKING AS MANAGER IN THE SAME DEPT AS TURNER
+    ==> SELECT EMP.* FROM EMP 
+    WHERE JOB = 'MANAGER'
+    AND  DEPTNO = (SELECT DEPTNO FROM EMP 
+                    WHERE ENAME = 'TURNER');
+
+14.WAQTD NAME AND HIREDATE OF THE EMPLOYEES HIRED AFTER 1980 AND BEFORE KING
+    ==> SELECT ENAME, HIREDATE FROM EMP
+        WHERE HIREDATE > '01-JAN-1980'
+        AND HIREDATE < (SELECT HIREDATE FROM EMP
+                         WHERE ENAME ='KING');
+
+15.WAQTD NAME AND SAL ALONG WITH ANNUAL SAL FOR ALL EMPLOYEES WHOS SAL IS LESS THAN BLAKE AND MORE THAN 3500
+    ==> SELECT ENAME,SAL, SAL*12 FROM EMP
+        WHERE SAL > (SELECT SAL FROM EMP 
+                     WHERE ENAME='BLAKE')
+        AND SAL < 3500;
+
+16.WAQTD ALL THE DETAILS OF EMPLOYEES WHO EARN MORE THAN SCOTT BUT LESS THAN KING.
+    ==> SELECT EMP.* FROM EMP
+        WHERE SAL > (SELECT SAL FROM EMP WHERE ENAME = 'SCOTT')
+        AND   SAL < (SELECT SAL FROM EMP WHERE ENAME = 'KING');
+
+
+17.WAQTD NAME OF THE EMPLOYEES WHOS NAME STARTS WITH 'A' AND WORKS IN THE SAME DEPT AS BLAKE
+    ==> SELECT ENAME, DEPTNO FROM EMP
+        WHERE ENAME LIKE '%A%'
+        AND DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'BLAKE');
+
+18.WAQTD NAME AND COMM IF EMPLOYEES EARN COMISSION AND WORK IN THE SAME DESIGNATION AS SMITH
+    ==> SELECT ENAME, COMM FROM EMP
+        WHERE COMM IS NOT NULL
+        AND JOB = (SELECT JOB FROM EMP WHERE ENAME = 'SMITH');
+
+19.WAQTD DETAILS OF ALL THE EMPLOYEES WORKING AS CLERK IN THE SAME DEPT AS TURNER .
+    ==> SELECT EMP.* FROM EMP
+        WHERE JOB = 'CLERK'
+        AND DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'TURNER');
+
+20.WAQTD ENAME, SAL AND DESIGNATION OF THE EMPLOYEES WHOS ANNUAL SALARY IS MORE THAN SMITH AND LESS THAN KING.
+    ==> SELECT ENAME,SAL,JOB FROM EMP
+        WHERE SAL*12 > (SELECT SAL FROM EMP WHERE ENAME = 'SMITH')
+        AND SAL*12 <(SELECT SAL FROM EMP WHERE ENAME ='KING');
+
+
+
+
