@@ -1,0 +1,47 @@
+
+
+
+                JOINTS : -
+
+    It is process of retrieval of data from multiple tables simulations is known as joints.
+
+
+# Why and when we used joint.
+    ==> when every attribute to be selected from both the tables we use joins.
+
+# Types of joints .
+1) Cartisian join (Cross Join) .
+2) Inner join (EQUI JOIN).
+3) Outer join 
+            I] Left outer join.
+            II] Right outer join.
+            III] Full outer join.
+4) self join.
+5) natural join.
+
+
+
+#1) Cartisian join (Cross Join) 
+        ==> in Cartesian join (Cross Join) table one record  ........  all the record of table two.
+
+ Synatax : ANSI 
+            SELECT COL_NAME 
+            FROM TABLE_NAME1 CROSS JOIN TABLE_NAME2;
+
+ Synatax: ORACLE
+            SELECT COL_NAME 
+            FROM TABLE_NAME1,TABLE_NAME2;
+
+
+ #) Drawback: no matching record.
+
+
+
+#2] Inner JOIN (EQUI JOIN) :
+    ==> it is only obtained matching records which have provided
+
+
+    
+
+
+
