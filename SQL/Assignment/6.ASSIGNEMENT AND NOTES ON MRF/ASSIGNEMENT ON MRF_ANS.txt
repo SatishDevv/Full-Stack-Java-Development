@@ -1,0 +1,38 @@
+                
+                
+                
+                ASSIGNEMENT ON MRF( )
+
+1.WAQTD NUMBER OF EMPLOYEES GETTING SALARY LESS THAN 2000 IN DEPTNO 10
+    ==> select count(*) from emp where sal < 2000 and deptno=10;
+
+2.WAQTD TOTAL SALARY NEEDED TO PAY EMPLOYEES WORKING AS CLERK
+    ==> select sum(sal) from emp where job = 'CLERK';
+
+3.WAQTD AVERAGE SALARY NEEDED TO PAY ALL EMPLOYEES
+    ==>  select avg(sal) from emp;
+
+4.WAQTD NUMBER OF EMPLOYEES HAVING 'A' AS THEIR FIRST CHARACTER
+    ==> select count(sal) from emp where ename like 'S%';
+
+5.WAQTD NUMBER OF EMPLOYEES WORKING AS CLERK OR MANAGER
+    ==> select count(*) from emp where job in ('MANAGER','CLERK');
+
+6.WAQTD TOTAL SALARY NEEDED TO PAY EMPLOYEES HIRED IN FEB
+    ==>select sum(sal) from emp where hiredate like '%-FEB-%';
+
+7.WAQTD NUMBER OF EMPLOYEES REPORTING TO 7839 (MGR)
+    ==> select count(*) from emp where mgr=7839;
+
+8.WAQTD NUMBER OF EMPLOYEES GETTING COMISSION IN DEPTNO 30
+    ==> select count(*) from emp where deptno=30;
+
+9.WAQTD AVG SAL , TOTAL SAL , NUMBER OF EMPS AND MAXIMUM SALARY GIVEN TO EMPLOYEES WORKING AS PERSIDENT
+    ==> select avg(sal), sum(sal), count(*), max(sal) from emp where job = 'PRESIDENT';
+
+10.WAQTD NUMBER OF EMPLOYEES HAVING 'A' IN THEIR NAMES
+    ==> select count(*) from emp where ename like '%A%';
+
+11.WAQTD NUMBER OF EMPS AND TOTAL SALARY NEEDED TO PAY THE EMPLOYEES WHO HAVE 2 CONSICUTIVE L's IN THEIR NAMES
+    ==>select count(*), sum(sal) from emp where ename like '%LL%';
+

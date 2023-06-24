@@ -1,0 +1,40 @@
+
+
+
+            ASSIGNMENT ON
+                         EXPRESSION & ALIAS
+
+
+1.WAQTD NAME OF THE EMPLOYEE ALONG WITH THEIR ANNUAL SALARY.
+    ==> select ename, sal*12 from emp ;
+
+2.WAQTD ENAME AND JOB FOR ALL THE EMPLOYEE WITH THEIR HALF TERM SALARY.
+    ==> select ename, job, sal*6 from emp ;
+
+3.WAQTD ALL THE DETAILS OF THE EMPLOYEES ALONG WITH AN ANNUAL BONUS OF 2000.
+    ==> select emp.*, sal*12+2000 from emp ;
+
+4.WAQTD NAME SALARY AND SALARY WITH A HIKE OF 10%.
+    ==> select ename, sal, sal*10/100 from emp ;
+
+5.WAQTD NAME AND SALARY WITH DEDUCTION OF 25%.
+    ==> select ename , sal-sal*25/100 from emp ;
+
+6.WAQTD NAME AND SALARY WITH MONTHLY HIKE OF 50.
+    ==> select ename, sal*50/100 from emp ;
+
+7.WAQTD NAME AND SALARY WITH DEDUCTION OF 10%.
+    ==> select ename, sal*10/100 from emp ;
+
+8.WAQTD TOTAL SALARY GIVEN TO EACH EMPLOYEE (SAL+COMM).
+    ==>
+
+9.WAQTD DETAILS OF ALL THE EMPLOYEES ALONG WITH ANNUAL SALARY.
+    ==> select emp.*, sal*12 from emp ;
+
+10.WAQTD NAME AND DESIGNATION ALONG WITH 100 PENALTY IN SALARY.
+    ==>
+
+
+
+

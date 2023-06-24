@@ -47,9 +47,7 @@
     ==> select emp.*, sal*12 from emp where deptno=30;
 
 15) LIST THE EMPLOYEES WHOSE NAME DOES NOT END WITH ‘ES’ OR ‘R.
-    ==> SELECT * FROM EMP
-        WHERE ENAME NOT LIKE '%ES' AND
-        ENAME NOT LIKE '%R';
+    ==> 
 
 16) LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10 ALONG WITH 10% HIKE IN SALARY
     ==> select emp.* , sal*10/100 from emp where job = 'MANAGER' AND deptno=30;
